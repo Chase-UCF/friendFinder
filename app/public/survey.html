@@ -3,13 +3,177 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Friend Finder</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 </head>
 
 <body>
-
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="text-center"><span class="glyphicon glyphicon-fire"></span> "Friend" Finder</h1>
+            <hr>
+            <h2 class="text-center">Answer some questions to find your "friend"!</h2>
+            <br>
+            <div class="text-center">
+                <a href="/">
+                    <button type="button" class="btn btn-lg btn-default"><span class="glyphicon glyphicon-home"></span></button>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">Questions</h4>
+                    </div>
+                    <div class="panel-body" id="friendQuestions">
+                        <div id="fullForm">
+                            <div class="input-group">
+                                <span class="input-group-addon" id="basic-addon1">Name</span>
+                                <input id="friendName" type="text" class="form-control" placeholder="name" aria-describedby="basic-addon1">
+                            </div>
+                            <div class="input-group">
+                                <span class="input-group-addon" id="basic-addon2">Image URL</span>
+                                <input id="imageUrl" type="text" class="form-control" placeholder="imageUrl" aria-describedby="basic-addon2">
+                            </div>
+                            <div class="form-group">
+                                <h3 class="control-label">Question 1</h3>
+                                <h4>I make friends easily.</h4>
+                                <select class="form-control question">
+                                    <option value="5">5(strongly agree)</option>
+                                    <option>4</option>
+                                    <option>3</option>
+                                    <option>2</option>
+                                    <option value="1">1( strongly disagree)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <h3 class="control-label">Question 2</h3>
+                                <h4>I worry about things.</h4>
+                                <select class="form-control question">
+                                    <option value="5">5(strongly agree)</option>
+                                    <option>4</option>
+                                    <option>3</option>
+                                    <option>2</option>
+                                    <option value="1">1( strongly disagree)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <h3 class="control-label">Question 3</h3>
+                                <h4>I get angry easily.</h4>
+                                <select class="form-control question">
+                                    <option value="5">5(strongly agree)</option>
+                                    <option>4</option>
+                                    <option>3</option>
+                                    <option>2</option>
+                                    <option value="1">1( strongly disagree)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <h3 class="control-label">Question 4</h3>
+                                <h4>I experience my emotions intensely.</h4>
+                                <select class="form-control question">
+                                    <option value="5">5(strongly agree)</option>
+                                    <option>4</option>
+                                    <option>3</option>
+                                    <option>2</option>
+                                    <option value="1">1( strongly disagree)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <h3 class="control-label">Question 5</h3>
+                                <h4>I love excitement.</h4>
+                                <select class="form-control question">
+                                    <option value="5">5(strongly agree)</option>
+                                    <option>4</option>
+                                    <option>3</option>
+                                    <option>2</option>
+                                    <option value="1">1( strongly disagree)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <h3 class="control-label">Question 6</h3>
+                                <h4>I like to solve complex problems.</h4>
+                                <select class="form-control question">
+                                    <option value="5">5(strongly agree)</option>
+                                    <option>4</option>
+                                    <option>3</option>
+                                    <option>2</option>
+                                    <option value="1">1( strongly disagree)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <h3 class="control-label">Question 7</h3>
+                                <h4>I trust others.</h4>
+                                <select class="form-control question">
+                                    <option value="5">5(strongly agree)</option>
+                                    <option>4</option>
+                                    <option>3</option>
+                                    <option>2</option>
+                                    <option value="1">1( strongly disagree)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <h3 class="control-label">Question 8</h3>
+                                <h4>I get chores done right away.</h4>
+                                <select class="form-control question">
+                                    <option value="5">5(strongly agree)</option>
+                                    <option>4</option>
+                                    <option>3</option>
+                                    <option>2</option>
+                                    <option value="1">1( strongly disagree)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <h3 class="control-label">Question 9</h3>
+                                <h4>I don't know why I do some of the things I do.</h4>
+                                <select class="form-control question">
+                                    <option value="5">5(strongly agree)</option>
+                                    <option>4</option>
+                                    <option>3</option>
+                                    <option>2</option>
+                                    <option value="1">1( strongly disagree)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <h3 class="control-label">Question 10</h3>
+                                <h4>Dogs over everything.</h4>
+                                <select class="form-control question">
+                                    <option value="5">5(strongly agree)</option>
+                                    <option>4</option>
+                                    <option>3</option>
+                                    <option>2</option>
+                                    <option value="1">1( strongly disagree)</option>
+                                </select>
+                            </div>
+                            <button class="btn btn-lg btn-danger" id="finish">Finish</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+<script type="text/javascript">
+$("#finish").on("click", function(event) {
+    event.preventDefault();
+    var answers = [];
+    $('.question').each(function() {
+        answers.push(parseInt($(this).val().trim()));
+    });
+    
+    var newFriendObject = {
+        friendName: $("#friendName").val().trim(),
+        friendUrl: $("#imageUrl").val().trim(),
+        answers: answers
+    };
+    $.post("/api/friends", newFriendObject)
+        .done(function(data) {
+            console.log(data);
+        });
+});
+</script>
 
 </html>
